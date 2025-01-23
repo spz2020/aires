@@ -198,8 +198,8 @@ class Aires():
         reply = self._brains[bot].reply(username, message)
 
         # TODO: log it
-        print "[{}] {}".format(username, message)
-        print "[{}] {}\n".format(agent, reply)
+        print u"[{}] {}".format(username, message)
+        print u"[{}] {}\n".format(agent, reply)
         return reply
 
     def add_queue(self, agent, func, args, recover=0):
