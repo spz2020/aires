@@ -5,7 +5,7 @@ import rivescript
 
 class RiveScript(Brain):
     def init(self, params):
-        self.rs = rivescript.RiveScript()
+        self.rs = rivescript.RiveScript(utf8=True)
         self.rs.load_directory(params['replies'])
         self.rs.sort_replies()
 
