@@ -1,3 +1,4 @@
+# Warn: This code only applies to Python 2 Cannot run at Python 3
 # Aires
 
 Aires is a multiprotocol, multibrained chatbot written in Python with a focus on
@@ -17,7 +18,7 @@ The Python dependencies are listed in `requirements.txt` and can easily be
 installed via `pip`:
 
 ```bash
-pip install -r requirements.txt
+pip2 install -r requirements.txt
 ```
 
 ## Bot Settings
