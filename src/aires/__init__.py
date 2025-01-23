@@ -198,7 +198,7 @@ class Aires():
         reply = self._brains[bot].reply(username, message)
 
         # TODO: log it
-        print u"[{}] {}".format(username, message)
+        print "[{}] {}".format(username, message)
         print u"[{}] {}\n".format(agent, reply)
         return reply
 
