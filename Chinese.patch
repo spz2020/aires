@@ -1,0 +1,29 @@
+--- rivescript-old.py	2025-01-23 17:49:49.421707919 +0800
++++ rivescript.py	2025-01-23 17:48:22.197707913 +0800
+@@ -1783,7 +1783,7 @@
+ 
+             reSet = re.findall('<set (.+?)=(.+?)>', reply)
+             for match in reSet:
+-                self._say("Set uservar " + str(match[0]) + "=" + str(match[1]))
++                self._say("Set uservar " + match[0] + "=" + match[1])
+                 self._users[user][match[0]] = match[1]
+                 reply = re.sub('<set ' + re.escape(match[0]) + '=' + re.escape(match[1]) + '>', '', reply)
+         else:
+@@ -2021,7 +2021,7 @@
+         # Set user vars.
+         reSet = re.findall('<set (.+?)=(.+?)>', reply)
+         for match in reSet:
+-            self._say("Set uservar " + str(match[0]) + "=" + str(match[1]))
++            self._say("Set uservar " + match[0] + "=" + match[1])
+             self._users[user][match[0]] = match[1]
+             reply = re.sub('<set ' + re.escape(match[0]) + '=' + re.escape(match[1]) + '>', '', reply)
+ 
+@@ -2067,7 +2067,7 @@
+             output = 'undefined'
+             if match in self._users[user]:
+                 output = self._users[user][match]
+-            reply = re.sub('<get ' + re.escape(match) + '>', str(output), reply)
++            reply = re.sub('<get ' + re.escape(match) + '>', output, reply)
+ 
+         # Topic setter.
+         reTopic = re.findall(r'\{topic=(.+?)\}', reply)
